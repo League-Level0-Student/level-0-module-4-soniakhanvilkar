@@ -13,14 +13,20 @@ public class PiAloud {
 	
 	
 	// 1. Make a main method and make sure your program can run
+public static void main(String[] args) {
+	
 
 	// 2. Make a String variable to hold 20 digits of Pi. You could use http://www.piday.org/million/ to get this.
-
+String digits = "3.141592653589793238462643383279502884197169399375105820974944592307816406286208";
 	// 3. Print out 3 digits of Pi. The first value is "pi.charAt(0)", the second is "pi.charAt(1)"
 	// Check the console shows 3.1
-
+System.out.println(digits.charAt(0));
+System.out.println(digits.charAt(1));
+System.out.println(digits.charAt(2));
 	// 4. Print ALL the digits of the Pi String, putting each digit on a new line  (hint: use a loop)
-
+for (int i = 0; i < digits.length(); i++) {
+	System.out.println(digits.charAt(i));
+}
 	// 5. Skip this step if your computer cannot play sounds. 
 	//		if (canPlaySounds) {
 	//				 Use the speak() method to speak each digit of Pi.   
@@ -31,8 +37,16 @@ public class PiAloud {
 	// *6. Get a character from the user using the getInputFromUser() method
 	// *7. Compare the users' char to the next digit of Pi
 	// *8. If they are correct, print out "correct". If they are not, print "incorrect" 
-	
-	
+char input = getInputFromUser();
+for (int i = 0; i < digits.length(); i++) {
+	if (digits.charAt(i) == input) {
+		System.out.println("correct");
+	}
+	else {
+		System.out.println("incorrect");
+	}
+}
+}	
 	
 	/********************  Use these methods. DON'T CHANGE THE CODE BELOW  ******************/
 
